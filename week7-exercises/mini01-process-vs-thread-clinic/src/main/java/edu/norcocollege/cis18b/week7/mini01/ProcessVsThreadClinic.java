@@ -29,6 +29,13 @@ public class ProcessVsThreadClinic {
                 "Sort one in-memory list and print it immediately.",
                 Recommendation.NOT_MEANINGFULLY_CONCURRENT,
                 "There is only one task, so concurrency adds complexity without benefit."
+            ),
+            // Extension challenge
+            new Scenario(
+                "addition calculator",
+                "Takes two numbers from user and then adds them.",
+                Recommendation.NOT_MEANINGFULLY_CONCURRENT,
+                "Does one step at a time, and does not move on to the next before the previous is done."
             )
         );
     }
