@@ -9,8 +9,15 @@ public class SimpleThreadCoordinationDemo {
 
     public static void main(String[] args) throws InterruptedException {
         List<String> completionLog = runDemo();
-        System.out.println("All workers completed.");
+        System.out.println("All workers completed."); // Stable 
+
+        // Line Break
+        System.out.println();
+
         System.out.println(completionLog);
+
+        // Line Break
+        System.out.println();
     }
 
     static List<String> runDemo() throws InterruptedException {
@@ -26,7 +33,11 @@ public class SimpleThreadCoordinationDemo {
             worker.start();
         }
 
-        System.out.println("All workers launched.");
+        System.out.println("All workers launched."); // Stable
+
+        // Line Break
+        System.out.println();
+        
         startGate.countDown();
 
         for (Thread worker : workers) {
